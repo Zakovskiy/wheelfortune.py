@@ -39,7 +39,7 @@ class PickerWheel:
             if piece.chance > 0:
                 self.non_zero_chances_indices.append(index)
 
-    def get_random_piece_index(self):
+    def get_random_piece_index(self) -> int:
         r = random.uniform(0.0, 1.0) * self.accumulated_weight
 
         for index, piece in enumerate(self.pieces):
